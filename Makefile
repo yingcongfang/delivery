@@ -4,10 +4,11 @@ install:
 
 test:
 	#python -m pytest -vv --cov=myrepolib tests/*.py
-	#python -m pytest --nbval notebook.ipynb
 
+format:
+	black *.py
 
 lint:
 	pylint --disable=R,C main.py
 
-all: install lint test
+all: install lint test 
